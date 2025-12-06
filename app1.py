@@ -77,7 +77,8 @@ if st.button("💰 GET PRICE"):
         max_price = filtered_df['price'].max()
         
         # Estimated price heading
-        st.markdown(f"<h2>Estimated Price: ${avg_price:.2f}</h2>", unsafe_allow_html=True)
+        st.markdown(f"<h2>Estimated Price: ₹{avg_price:.2f}</h2>", unsafe_allow_html=True)
+
         st.markdown("---")
         
         st.markdown("Matching Diamonds:")
@@ -85,9 +86,10 @@ if st.button("💰 GET PRICE"):
         
         # Display Min, Avg, Max using markdown with black text
         stat_col1, stat_col2, stat_col3 = st.columns(3)
-        stat_col1.markdown(f"<h3 style='color:black'>Minimum Price:<br>${min_price:.2f}</h3>", unsafe_allow_html=True)
-        stat_col2.markdown(f"<h3 style='color:black'>Average Price:<br>${avg_price:.2f}</h3>", unsafe_allow_html=True)
-        stat_col3.markdown(f"<h3 style='color:black'>Maximum Price:<br>${max_price:.2f}</h3>", unsafe_allow_html=True)
+        stat_col1.markdown(f"<h3>Minimum Price:<br>₹{min_price:.2f}</h3>", unsafe_allow_html=True)
+stat_col2.markdown(f"<h3>Average Price:<br>₹{avg_price:.2f}</h3>", unsafe_allow_html=True)
+stat_col3.markdown(f"<h3>Maximum Price:<br>₹{max_price:.2f}</h3>", unsafe_allow_html=True)
+
         
     else:
         st.warning("❌ No diamonds found with this combination.")
