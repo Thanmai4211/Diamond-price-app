@@ -87,8 +87,8 @@ if st.button("💰 GET PRICE"):
         # Display Min, Avg, Max using markdown with black text
         stat_col1, stat_col2, stat_col3 = st.columns(3)
         stat_col1.markdown(f"<h3>Minimum Price:<br>₹{min_price:.2f}</h3>", unsafe_allow_html=True)
-stat_col2.markdown(f"<h3>Average Price:<br>₹{avg_price:.2f}</h3>", unsafe_allow_html=True)
-stat_col3.markdown(f"<h3>Maximum Price:<br>₹{max_price:.2f}</h3>", unsafe_allow_html=True)
+        stat_col2.markdown(f"<h3>Average Price:<br>₹{avg_price:.2f}</h3>", unsafe_allow_html=True)
+        stat_col3.markdown(f"<h3>Maximum Price:<br>₹{max_price:.2f}</h3>", unsafe_allow_html=True)
 
         
     else:
